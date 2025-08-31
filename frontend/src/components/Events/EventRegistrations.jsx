@@ -34,12 +34,6 @@ const EventRegistrations = ({ open, event, onClose }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    if (open && event) {
-      loadRegistrations();
-    }
-  }, [open, event, loadRegistrations]);
-
   const loadRegistrations = React.useCallback(async () => {
     try {
       setLoading(true);
@@ -57,6 +51,12 @@ const EventRegistrations = ({ open, event, onClose }) => {
       setLoading(false);
     }
   }, [event]);
+
+  useEffect(() => {
+    if (open && event) {
+      loadRegistrations();
+    }
+  }, [open, event, loadRegistrations]);
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('pt-BR', {
