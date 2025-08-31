@@ -175,6 +175,7 @@ const LoginForm = () => {
                 onChange={handleChange}
                 margin='normal'
                 error={fieldErrors.email}
+                placeholder='Digite seu email'
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>
@@ -193,6 +194,7 @@ const LoginForm = () => {
                 onChange={handleChange}
                 margin='normal'
                 error={fieldErrors.password}
+                placeholder='Digite sua senha'
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>

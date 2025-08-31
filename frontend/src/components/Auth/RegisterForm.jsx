@@ -172,6 +172,7 @@ const RegisterForm = () => {
               label='Nome Completo'
               value={formData.name}
               onChange={handleChange}
+              placeholder='Digite seu nome completo'
               margin='normal'
               error={fieldErrors.name}
               InputProps={{
@@ -188,6 +189,7 @@ const RegisterForm = () => {
               name='email'
               label='Email'
               type='email'
+              placeholder='Digite seu email'
               value={formData.email}
               onChange={handleChange}
               margin='normal'
@@ -210,6 +212,7 @@ const RegisterForm = () => {
               onChange={handleChange}
               margin='normal'
               error={fieldErrors.password}
+              placeholder='Digite sua senha'
               InputProps={{
                 startAdornment: (
                   <InputAdornment position='start'>
@@ -235,6 +238,7 @@ const RegisterForm = () => {
               label='Confirmar Senha'
               type={showPassword ? 'text' : 'password'}
               value={formData.confirmPassword}
+              placeholder='Digite sua senha novamente'
               onChange={handleChange}
               margin='normal'
               error={fieldErrors.confirmPassword}
